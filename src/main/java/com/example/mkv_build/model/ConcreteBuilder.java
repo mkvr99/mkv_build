@@ -20,11 +20,8 @@ public class ConcreteBuilder implements Builder{
     }
 
     public void drawRectIndicator(int x, int y, int height, int width) {
-        this.indicator.getRectangle_indicator().setX((double)x);
-        this.indicator.getRectangle_indicator().setY((double)y);
-        this.indicator.getRectangle_indicator().setHeight((double)height);
-        this.indicator.getRectangle_indicator().setWidth((double)width);
-        this.indicator.getRectangle_indicator().setFill(Color.DARKOLIVEGREEN);
+        Label a =new Label().setX(x).setY(y).set(w);//сделан "кирпич"
+        indicator.add(a);//добавлен к Индикатору
     }
 
     public void drawStartStopLabel(int x_start, int y_start, String text_start, int x_point, int y_point, String text_point, int x_end, int y_end, String text_end) {
